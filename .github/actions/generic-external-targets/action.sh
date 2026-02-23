@@ -34,7 +34,7 @@ cat > v3.ext << EOF
 subjectKeyIdentifier   = hash
 authorityKeyIdentifier = keyid:always,issuer:always
 keyUsage               = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment, keyAgreement, keyCertSign
-subjectAltName         = DNS:$OTHERTARGETNAME, DNS:$TARGETNAME
+subjectAltName         = DNS:$OTHERTARGETNAME, DNS:$TARGETNAME, DNS:fake.external.first.target, DNS:fake.external.second.target
 EOF
 
 # Turn the certificate signing request into a certificate, signed by our CA
@@ -80,7 +80,7 @@ cat > v3.ext << EOF
 subjectKeyIdentifier   = hash
 authorityKeyIdentifier = keyid:always,issuer:always
 keyUsage               = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment, keyAgreement, keyCertSign
-subjectAltName         = DNS:$OTHERTARGETNAME, DNS:$TARGETNAME, IP:$IP4TARGET, IP:$IP4OTHERTARGET
+subjectAltName         = DNS:$OTHERTARGETNAME, DNS:$TARGETNAME, DNS:fake.external.first.target, DNS:fake.external.second.target, IP:$IP4TARGET, IP:$IP4OTHERTARGET
 EOF
 
 # Turn the certificate signing request into a certificate, signed by our CA

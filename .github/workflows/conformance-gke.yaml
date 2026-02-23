@@ -467,6 +467,7 @@ jobs:
           external-other-ip: ${{ steps.external_targets.outputs.ipv4_other_external_target }}
           external-target-ca-namespace: external-target-secrets
           external-target-ca-name: custom-ca
+          external-target-fake-dns: true
           hubble: false
           test-concurrency: 5
 
